@@ -131,10 +131,13 @@ When a user asks a question:
 ## 📸 Demo
 
 PROMPT: 
-<img width="2482" height="904" alt="image" src="https://github.com/user-attachments/assets/d61c4bec-8f86-47e6-900e-9cf5b7be9ba3" />
+<img width="2504" height="948" alt="image" src="https://github.com/user-attachments/assets/1ecd0c40-f98e-4cfe-997e-e639fb8e1dae" />
+
+
 
 RESPONSE:
-<img width="2468" height="598" alt="image" src="https://github.com/user-attachments/assets/f12f6680-9cb6-4d08-9160-889b5816fa5c" />
+<img width="2470" height="1526" alt="image" src="https://github.com/user-attachments/assets/1a1e944a-6c71-488b-b6f8-fde3a4903269" />
+
 
 ---
 
