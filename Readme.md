@@ -1,29 +1,61 @@
 # 🎓 RAG-Based AI Teaching Assistant
 
-A Retrieval-Augmented Generation (RAG) based AI Teaching Assistant that answers students' questions from recorded lecture videos. The system converts lecture videos into searchable knowledge, retrieves the most relevant lecture segments using semantic search, and generates context-aware answers using a Large Language Model (LLM).
+An AI-powered Teaching Assistant built using **Retrieval-Augmented Generation (RAG)** that answers students' questions based on lecture videos. The system retrieves relevant lecture content using semantic search and generates grounded responses with a Large Language Model (LLM), along with the corresponding lecture and timestamp.
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-- Convert lecture videos to audio using FFmpeg
-- Transcribe and translate lectures using Whisper
-- Generate timestamped transcript chunks
-- Create semantic embeddings using BGE-M3 via Ollama
-- Retrieve relevant lecture segments using cosine similarity
-- Generate grounded answers using Llama 3.2
-- Recommend the relevant lecture number and timestamp to the student
+- 🎥 Processes recorded lecture videos
+- 🎙️ Converts speech to text using Whisper
+- 📑 Generates timestamped transcripts
+- 🧠 Creates semantic embeddings using BGE-M3
+- 🔍 Retrieves relevant lecture chunks using cosine similarity
+- 🤖 Generates context-aware answers using Llama 3.2
+- ⏱️ Provides the relevant lecture number and timestamp
+
+---
+
+## 🏗️ Architecture
+
+```
+Lecture Videos
+      │
+      ▼
+Audio Extraction
+      │
+      ▼
+Speech-to-Text (Whisper)
+      │
+      ▼
+Transcript Chunking
+      │
+      ▼
+Embedding Generation (BGE-M3)
+      │
+      ▼
+Semantic Search
+      │
+      ▼
+Prompt Construction
+      │
+      ▼
+Llama 3.2
+      │
+      ▼
+Final Response
+```
 
 ---
 
 ## 🛠️ Tech Stack
 
 - Python
-- FFmpeg
-- OpenAI Whisper (Large-v2)
 - Ollama
-- BGE-M3 Embedding Model
 - Llama 3.2
+- BGE-M3 Embedding Model
+- OpenAI Whisper
+- FFmpeg
 - Pandas
 - NumPy
 - Scikit-learn
@@ -43,133 +75,67 @@ A Retrieval-Augmented Generation (RAG) based AI Teaching Assistant that answers 
 ├── create_embeddings.py
 ├── rag_inference.py
 ├── embeddings.joblib
-├── README.md
-└── requirements.txt
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-## ⚙️ Workflow
+## ⚙️ Installation
 
-### Step 1 – Add Lecture Videos
-
-Place all lecture videos inside the `videos/` folder.
-
----
-
-### Step 2 – Extract Audio
-
-Run:
+Clone the repository:
 
 ```bash
-python extract_audio.py
+git clone <repository-url>
+cd RAG-based-AI-teaching-assistant
 ```
 
-This converts all lecture videos into MP3 files using FFmpeg.
-
----
-
-### Step 3 – Generate Transcripts
-
-Run:
+Install the required dependencies:
 
 ```bash
-python transcribe_audio.py
+pip install -r requirements.txt
 ```
 
-Whisper transcribes and translates each lecture into timestamped JSON files.
+Install and start **Ollama**, then download the required models:
+
+- `llama3.2`
+- `bge-m3`
+
+Ensure **FFmpeg** is installed and available in your system PATH.
 
 ---
 
-### Step 4 – Generate Embeddings
+## 💡 How It Works
 
-Run:
+The application converts lecture videos into timestamped transcripts, generates semantic embeddings for each transcript chunk, and stores them for retrieval.
 
-```bash
-python create_embeddings.py
-```
+When a user asks a question:
 
-This converts every transcript chunk into semantic embeddings using the **BGE-M3** embedding model and stores them in `embeddings.joblib`.
-
----
-
-### Step 5 – Ask Questions
-
-Run:
-
-```bash
-python rag_inference.py
-```
-
-Enter your question in the terminal.
-
-The system:
-
-- Generates an embedding for the question
-- Retrieves the most relevant lecture chunks
-- Builds a prompt
-- Sends it to Llama 3.2 via Ollama
-- Returns a grounded answer with the relevant lecture number and timestamp
+1. The query is converted into an embedding.
+2. Semantic similarity search retrieves the most relevant transcript chunks.
+3. The retrieved context is provided to the language model.
+4. The model generates a grounded answer and recommends the corresponding lecture and timestamp.
 
 ---
 
-## 🧠 RAG Pipeline
+## 🚀 Future Improvements
 
-```
-Lecture Video
-      │
-      ▼
-Extract Audio (FFmpeg)
-      │
-      ▼
-Speech-to-Text (Whisper)
-      │
-      ▼
-Timestamped JSON
-      │
-      ▼
-Embedding Generation (BGE-M3)
-      │
-      ▼
-embeddings.joblib
-      │
-──────────────────────────────
-      │
-User Question
-      │
-      ▼
-Question Embedding
-      │
-      ▼
-Cosine Similarity Search
-      │
-      ▼
-Top Relevant Chunks
-      │
-      ▼
-Prompt Construction
-      │
-      ▼
-Llama 3.2
-      │
-      ▼
-Final Answer + Lecture Timestamp
-```
+- FAISS Vector Database
+- Streamlit Web Interface
+- Support for PDFs and Documents
+- Incremental Embedding Updates
+- Docker Deployment
 
 ---
 
-## 📌 Future Improvements
+## 📸 Demo
 
-- Replace cosine similarity search with FAISS
-- Add a Streamlit web interface
-- Support PDF and document ingestion
-- Incremental embedding updates
-- Docker support
+
 
 ---
 
-## 👨‍💻 Author
+## 👤 Author
 
 **Samprit Datta**
 
-If you found this project useful, feel free to ⭐ the repository.
+If you found this project interesting, consider giving it a ⭐.
