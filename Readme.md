@@ -131,7 +131,8 @@ When a user asks a question:
 ## 📸 Demo
 
 PROMPT: 
-<img width="2504" height="948" alt="image" src="https://github.com/user-attachments/assets/1ecd0c40-f98e-4cfe-997e-e639fb8e1dae" />
+<img width="2480" height="906" alt="image" src="https://github.com/user-attachments/assets/cb8ea6da-2fbb-4fd8-add2-73bbef0f553d" />
+
 
 
 
