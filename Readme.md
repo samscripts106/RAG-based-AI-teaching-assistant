@@ -130,7 +130,11 @@ When a user asks a question:
 
 ## 📸 Demo
 
+PROMPT: 
+<img width="2482" height="904" alt="image" src="https://github.com/user-attachments/assets/d61c4bec-8f86-47e6-900e-9cf5b7be9ba3" />
 
+RESPONSE:
+<img width="2468" height="598" alt="image" src="https://github.com/user-attachments/assets/f12f6680-9cb6-4d08-9160-889b5816fa5c" />
 
 ---
 
