@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Generated files
+embeddings.joblib
+output.json
+response.txt
+
+# Large folders
+audios/
+videos/
+jsons/
+
+# Mac
+.DS_Store
+
+# Environment
+.env
+venv/
