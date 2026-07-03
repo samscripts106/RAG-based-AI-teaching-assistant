@@ -48,7 +48,7 @@ new_df = df.loc[max_indx]
 
 # print(new_df[["title", "number", "text"]])
 
-prompt = f''' I am teaching web development in my Sigma development course. Here are video chunks containg video title, video number, start time in second, end time in seconds, the text at that time:
+prompt = f''' Here are video chunks containg video title, video number, start time in second, end time in seconds, the text at that time:
 
 {new_df[["title", "number", "start", "end", "text"]].to_json(orient="records")}
 ---------------------------
