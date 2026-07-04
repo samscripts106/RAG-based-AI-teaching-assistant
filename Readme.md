@@ -118,16 +118,6 @@ When a user asks a question:
 
 ---
 
-## 🚀 Future Improvements
-
-- FAISS Vector Database
-- Streamlit Web Interface
-- Support for PDFs and Documents
-- Incremental Embedding Updates
-- Docker Deployment
-
----
-
 ## 📸 Demo
 
 PROMPT: 
